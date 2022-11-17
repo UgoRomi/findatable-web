@@ -6,7 +6,7 @@ export default function SearchBar({ className }: { className?: string }) {
       <label htmlFor='search' className='sr-only'>
         Search for a restaurant
       </label>
-      <div className='relative mt-1 rounded-md shadow-sm w-[350px]'>
+      <div className='relative mt-1 rounded-md shadow-sm w-[350px] md:w-[750px]'>
         <div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3'>
           <MagnifyingGlassIcon
             className='h-5 w-5 text-gray-400'

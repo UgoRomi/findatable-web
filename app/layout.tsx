@@ -1,5 +1,6 @@
 import { Analytics } from '@/components/Analytics';
 import Header from '@/components/Header';
+import { Toaster } from '@/ui/toast';
 import { Raleway, Bitter } from '@next/font/google';
 import './globals.css';
 
@@ -21,6 +22,7 @@ export default function RootLayout({
     >
       <head />
       <body className='min-h-screen'>
+        <Toaster />
         <Header />
         <main>{children}</main>
         <Analytics />
