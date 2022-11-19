@@ -1,12 +1,14 @@
 import SearchBar from '@/components/SearchBar';
 
 async function getData() {
-  const res = await fetch('/api/restaurants');
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
+  try {
+    return await prisma?.restaurant.findMany();
+  } catch (error) {
+    console.log(error);
+    throw new Error(
+      'There was an error fetching the restaurants. Please refresh the page.'
+    );
   }
-  const data = await res.json();
-  return data;
 }
 
 export default async function Home() {

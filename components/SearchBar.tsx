@@ -1,6 +1,10 @@
+'use client';
+
 import { MagnifyingGlassIcon, XCircleIcon } from '@heroicons/react/24/solid';
+import { useState } from 'react';
 
 export default function SearchBar({ className }: { className?: string }) {
+  const [search, setSearch] = useState('');
   return (
     <div className={`flex-center ${className ?? ''}`}>
       <label htmlFor='search' className='sr-only'>
@@ -18,6 +22,8 @@ export default function SearchBar({ className }: { className?: string }) {
           name='search'
           id='search'
           className='block w-full rounded-md text-zinc-900 border-gray-300 px-10 focus:border-green-200 focus:ring-green-200 sm:text-sm'
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
         />
         <div className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3'>
           <XCircleIcon className='h-5 w-5 text-gray-400' aria-hidden='true' />
