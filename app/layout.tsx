@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className='min-h-screen'>
         <Toaster />
         <Header />
-        <main>{children}</main>
+        <main className='mx-3'>{children}</main>
         <Analytics />
       </body>
     </html>

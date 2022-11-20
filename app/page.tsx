@@ -1,9 +1,11 @@
+import RestaurantCard from '@/components/RestaurantCard';
 import SearchBar from '@/components/SearchBar';
 import prisma from '@/lib/prisma';
 
 async function getData() {
   try {
-    return await prisma?.restaurant.findMany();
+    const restaurants = await prisma.restaurant.findMany();
+    return { restaurants };
   } catch (error) {
     console.log(error);
     throw new Error(
@@ -18,7 +20,11 @@ export default async function Home() {
   return (
     <>
       <SearchBar className='flex md:hidden' />
-      {JSON.stringify(data)}
+      <div className='flex-center mt-6 flex-col gap-y-10'>
+        {data.restaurants.map((restaurant) => (
+          <RestaurantCard key={restaurant.id} {...restaurant} />
+        ))}
+      </div>
     </>
   );
 }

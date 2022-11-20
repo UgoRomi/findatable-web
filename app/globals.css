@@ -7,3 +7,9 @@
     @apply flex items-center justify-center;
   }
 }
+
+@layer components {
+  .button-outline-secondary {
+    @apply border-2 w-full rounded-md font-main font-bold py-[11px] border-zinc-100 text-zinc-100 hover:border-green-100 hover:text-green-100;
+  }
+}
