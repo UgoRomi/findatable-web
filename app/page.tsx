@@ -1,4 +1,5 @@
 import SearchBar from '@/components/SearchBar';
+import prisma from '@/lib/prisma';
 
 async function getData() {
   try {
