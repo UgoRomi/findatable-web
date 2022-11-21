@@ -1,5 +1,6 @@
 import { Analytics } from '@/components/Analytics';
 import Header from '@/components/Header';
+import { getCurrentUser } from '@/lib/session';
 import { Toaster } from '@/ui/toast';
 import { Raleway, Bitter } from '@next/font/google';
 import './globals.css';
@@ -10,11 +11,12 @@ const raleway = Raleway({
 });
 const bitter = Bitter({ subsets: ['latin'] });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const user = await getCurrentUser();
   return (
     <html
       lang='en'
