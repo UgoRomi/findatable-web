@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     appDir: true,
+    serverComponentsExternalPackages: ['@ugoromi/findatable-prisma-client'],
   },
   images: {
     domains: ['i.ibb.co'],
