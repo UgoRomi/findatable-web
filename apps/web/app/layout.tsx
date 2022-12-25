@@ -1,7 +1,7 @@
-import { Analytics } from 'apps/web/components/Analytics';
-import Header from 'apps/web/components/Header';
-import { getCurrentUser } from '@/lib/session';
-import { Toaster } from '@/ui/toast';
+import { Analytics } from '../components/Analytics';
+import Header from '../components/Header';
+import { getCurrentUser } from '../lib/session';
+import { Toaster } from '../ui/toast';
 import { Raleway, Bitter } from '@next/font/google';
 import './globals.css';
 
