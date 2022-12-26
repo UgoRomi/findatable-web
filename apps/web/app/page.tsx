@@ -1,6 +1,6 @@
-import RestaurantCard from '@/components/RestaurantCard';
-import SearchBar from '@/components/SearchBar';
-import prisma from '@/lib/prisma';
+import RestaurantCard from '../components/RestaurantCard';
+import SearchBar from '../components/SearchBar';
+import { prisma } from 'database';
 
 async function getData() {
   try {
