@@ -3,7 +3,17 @@
   "globalEnv": ["NODE_ENV"],
   "pipeline": {
     "build": {
-      "dependsOn": ["^build", "^db:generate"],
+      "dependsOn": [
+        "^build",
+        "^db:generate",
+        "$EMAIL_SERVER",
+        "$EMAIL_FROM",
+        "$GITHUB_ID",
+        "$GITHUB_SECRET",
+        "$GOOGLE_ID",
+        "$GOOGLE_SECRET",
+        "$DATABASE_URL"
+      ],
       "outputs": ["dist/**", ".next/**"]
     },
     "dev": {
