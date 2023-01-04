@@ -3,19 +3,17 @@
   "globalEnv": ["NODE_ENV"],
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build", "^db:generate"],
       "outputs": ["dist/**", ".next/**"]
     },
-    "db:migrate:deploy": {
-      "outputs": []
+    "dev": {
+      "dependsOn": ["^db:generate"],
+      "cache": false
+    },
+    "db:generate": {
+      "cache": false
     },
     "db:push": {
-      "outputs": []
-    },
-    "db:seed": {
-      "outputs": []
-    },
-    "dev": {
       "cache": false
     },
     "generate": {

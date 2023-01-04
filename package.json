@@ -7,8 +7,7 @@
     "packages/*"
   ],
   "prisma": {
-    "schema": "packages/database/prisma/schema.prisma",
-    "seed": "tsx packages/database/src/seed.ts"
+    "schema": "packages/database/prisma/schema.prisma"
   },
   "scripts": {
     "build": "turbo run build",
@@ -32,5 +31,5 @@
   "volta": {
     "node": "18.12.1"
   },
-  "packageManager": "pnpm@7.21.0"
+  "packageManager": "pnpm@7.22.0"
 }
