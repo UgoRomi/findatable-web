@@ -45,7 +45,6 @@ importers:
       '@heroicons/react': ^2.0.13
       '@next-auth/prisma-adapter': ^1.0.5
       '@next/font': ^13.0.2
-      '@prisma/client': ^4.7.1
       '@tailwindcss/forms': ^0.5.3
       '@types/node': 18.11.9
       '@types/react': 18.0.24
@@ -67,9 +66,8 @@ importers:
       typescript: 4.8.4
     dependencies:
       '@heroicons/react': 2.0.13_react@18.2.0
-      '@next-auth/prisma-adapter': 1.0.5_o5bqbtvtgq3azu224hvvkl6nwy
+      '@next-auth/prisma-adapter': 1.0.5_next-auth@4.18.7
       '@next/font': 13.1.1
-      '@prisma/client': 4.8.0
       '@types/node': 18.11.9
       '@types/react': 18.0.24
       '@types/react-dom': 18.0.8
@@ -566,7 +564,7 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@next-auth/prisma-adapter/1.0.5_o5bqbtvtgq3azu224hvvkl6nwy:
+  /@next-auth/prisma-adapter/1.0.5_next-auth@4.18.7:
     resolution:
       {
         integrity: sha512-VqMS11IxPXrPGXw6Oul6jcyS/n8GLOWzRMrPr3EMdtD6eOalM6zz05j08PcNiis8QzkfuYnCv49OvufTuaEwYQ==,
@@ -575,7 +573,6 @@ packages:
       '@prisma/client': '>=2.26.0 || >=3'
       next-auth: ^4
     dependencies:
-      '@prisma/client': 4.8.0
       next-auth: 4.18.7_vo2mwhatbdlbtvmnsv5k22xfpu
     dev: false
 
@@ -805,22 +802,6 @@ packages:
       picocolors: 1.0.0
       tiny-glob: 0.2.9
       tslib: 2.4.1
-    dev: false
-
-  /@prisma/client/4.8.0:
-    resolution:
-      {
-        integrity: sha512-Y1riB0p2W52kh3zgssP/YAhln3RjBFcJy3uwEiyjmU+TQYh6QTZDRFBo3JtBWuq2FyMOl1Rye8jxzUP+n0l5Cg==,
-      }
-    engines: { node: '>=14.17' }
-    requiresBuild: true
-    peerDependencies:
-      prisma: '*'
-    peerDependenciesMeta:
-      prisma:
-        optional: true
-    dependencies:
-      '@prisma/engines-version': 4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe
     dev: false
 
   /@prisma/client/4.8.0_prisma@4.8.0:
