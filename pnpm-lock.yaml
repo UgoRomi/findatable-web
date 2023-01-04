@@ -24,12 +24,14 @@ importers:
       '@types/node': ^18.11.18
       database: '*'
       date-fns: ^2.29.3
+      dotenv: ^16.0.3
       ts-node: ^10.9.1
       tsconfig: '*'
       typescript: ^4.9.4
       undici: ^5.14.0
     dependencies:
       date-fns: 2.29.3
+      dotenv: 16.0.3
     devDependencies:
       '@types/node': 18.11.18
       database: link:../../packages/database
@@ -120,9 +122,8 @@ importers:
       tsup: ^5.11.13
       tsx: ^3.7.1
       typescript: ^4.9.3
-    dependencies:
-      '@prisma/client': 4.8.0_prisma@4.8.0
     devDependencies:
+      '@prisma/client': 4.8.0_prisma@4.8.0
       '@types/node': 18.11.17
       config: 3.3.8
       dotenv-cli: 6.0.0
@@ -838,14 +839,13 @@ packages:
     dependencies:
       '@prisma/engines-version': 4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe
       prisma: 4.8.0
-    dev: false
+    dev: true
 
   /@prisma/engines-version/4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe:
     resolution:
       {
         integrity: sha512-MHSOSexomRMom8QN4t7bu87wPPD+pa+hW9+71JnVcF3DqyyO/ycCLhRL1we3EojRpZxKvuyGho2REQsMCvxcJw==,
       }
-    dev: false
 
   /@prisma/engines/4.8.0:
     resolution:
@@ -853,6 +853,7 @@ packages:
         integrity: sha512-A1Asn2rxZMlLAj1HTyfaCv0VQrLUv034jVay05QlqZg1qiHPeA3/pGTfNMijbsMYCsGVxfWEJuaZZuNxXGMCrA==,
       }
     requiresBuild: true
+    dev: true
 
   /@rushstack/eslint-patch/1.2.0:
     resolution:
@@ -2008,7 +2009,6 @@ packages:
         integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==,
       }
     engines: { node: '>=12' }
-    dev: true
 
   /electron-to-chromium/1.4.284:
     resolution:
@@ -5057,6 +5057,7 @@ packages:
     requiresBuild: true
     dependencies:
       '@prisma/engines': 4.8.0
+    dev: true
 
   /prop-types/15.8.1:
     resolution:

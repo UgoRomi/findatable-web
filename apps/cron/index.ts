@@ -1,3 +1,6 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 import { prisma } from 'database';
 async function main() {
   const restaurants = await prisma.restaurant.findMany();
@@ -5,3 +8,4 @@ async function main() {
     console.log(restaurant.name);
   }
 }
+main();
