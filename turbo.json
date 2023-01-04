@@ -3,18 +3,17 @@
   "globalEnv": ["NODE_ENV"],
   "pipeline": {
     "build": {
-      "dependsOn": [
-        "^build",
-        "^db:generate",
-        "$EMAIL_SERVER",
-        "$EMAIL_FROM",
-        "$GITHUB_ID",
-        "$GITHUB_SECRET",
-        "$GOOGLE_ID",
-        "$GOOGLE_SECRET",
-        "$DATABASE_URL"
-      ],
-      "outputs": ["dist/**", ".next/**"]
+      "dependsOn": ["^build", "^db:generate"],
+      "outputs": ["dist/**", ".next/**"],
+      "env": [
+        "EMAIL_SERVER",
+        "EMAIL_FROM",
+        "GITHUB_ID",
+        "GITHUB_SECRET",
+        "GOOGLE_ID",
+        "GOOGLE_SECRET",
+        "DATABASE_URL"
+      ]
     },
     "dev": {
       "dependsOn": ["^db:generate"],
@@ -32,5 +31,6 @@
     "lint": {
       "outputs": []
     }
-  }
+  },
+  "globalDependencies": []
 }
